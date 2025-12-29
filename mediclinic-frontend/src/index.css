@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+  --primary: #6366f1;
+  --bg: #f8fafc;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+}
+
+body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-main); }
+
+/* Layout الهيكل العام */
+.dashboard-layout { display: flex; height: 100vh; overflow: hidden; }
+.main-sidebar { width: 280px; background: white; border-right: 1px solid #e2e8f0; display: flex; flex-direction: column; padding: 30px 20px; }
+.main-container { flex: 1; display: flex; flex-direction: column; overflow-y: auto; }
+
+/* Sidebar القائمة الجانبية */
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 50px; }
+.brand-logo { background: var(--primary); padding: 8px; border-radius: 12px; }
+.nav-item { display: flex; align-items: center; gap: 15px; padding: 14px 18px; border-radius: 14px; color: var(--text-muted); text-decoration: none; transition: 0.2s; margin-bottom: 5px; }
+.nav-item.active { background: #6366f115; color: var(--primary); font-weight: 600; }
+.sidebar-footer { margin-top: auto; border-top: 1px solid #f1f5f9; padding-top: 20px; }
+
+/* Navbar الشريط العلوي */
+.top-navbar { height: 80px; background: white; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; border-bottom: 1px solid #e2e8f0; }
+.search-box { background: #f1f5f9; padding: 10px 15px; border-radius: 12px; display: flex; align-items: center; gap: 10px; width: 300px; }
+.search-box input { border: none; background: transparent; outline: none; width: 100%; }
+
+/* Stats الكروت */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 30px 40px; }
+.stat-card { background: white; padding: 25px; border-radius: 24px; display: flex; align-items: center; gap: 15px; border: 1px solid #f1f5f9; position: relative; }
+.stat-value { font-size: 26px; font-weight: 800; margin: 0; }
+.stat-label { color: var(--text-muted); font-size: 14px; margin: 0; }
+.stat-trend { position: absolute; top: 15px; right: 20px; color: #10b981; font-size: 12px; font-weight: 600; }
+
+/* Charts الرسوم البيانية */
+.charts-section { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; padding: 0 40px; }
+.chart-container { background: white; padding: 25px; border-radius: 24px; border: 1px solid #f1f5f9; }
+
+/* Table الجدول */
+.table-wrapper { background: white; margin: 20px 40px; border-radius: 24px; padding: 20px; border: 1px solid #f1f5f9; }
+.modern-table { width: 100%; border-collapse: collapse; }
+.modern-table th { text-align: left; padding: 15px; font-size: 12px; color: var(--text-muted); }
+.modern-table td { padding: 15px; border-top: 1px solid #f8fafc; }
+.patient-cell { display: flex; align-items: center; gap: 12px; }
+.avatar-small { width: 38px; height: 38px; background: var(--primary); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+.status-tag { background: #dcfce7; color: #16a34a; padding: 4px 12px; border-radius: 20px; font-size: 12px; }
+
+/* Buttons الأزرار */
+.add-btn, .refresh-btn { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 12px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-weight: 600; }
